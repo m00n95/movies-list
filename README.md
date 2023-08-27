@@ -4,7 +4,7 @@
 
 [landing page](index.php)
 
-Première page où l'on peut trouver une rapide présentation du site et une moyen de se connecter pour vraiment accéder au site.
+Première page où l'on peut trouver une rapide présentation du site et un moyen de se connecter pour vraiment accéder au site.
 
 ## Accueil
 
