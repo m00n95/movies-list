@@ -8,7 +8,7 @@ Première page où l'on peut trouver une rapide présentation du site et une moy
 
 ## Accueil
 
-[page d'acceuil](homepage.php)
+[page d'accueil](homepage.php)
 
 Page à laquelle on accède après s'être connecté. 
 
