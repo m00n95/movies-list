@@ -10,7 +10,7 @@
 
     <nav class="navbar">
         <div class="logo"> 
-            <a href="#"><img src="/assets/img/Movie-List-black.png" alt=""></a>
+            <a href="#"><img src="/assets/img/Movie-List-black.png" alt="logo"></a>
         </div>
         <div class="nav-btn">
             <button><a href="#">Se connecter</a></button>
