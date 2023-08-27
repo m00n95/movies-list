@@ -19,3 +19,10 @@ body
 {
     color: white !important;
 }
+
+h2
+{
+    color: white;
+    margin-left: 50px;
+    margin-top: 30px;
+}

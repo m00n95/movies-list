@@ -7,11 +7,11 @@ require_once 'classes/Movie.php';
 require_once 'functions/getMovie.php';
 require_once 'functions/displayMovie.php';
 
-$array = getMovie();
+$movies = getMovie();
 ?>
 
 <div class="contain">
     <div class="row">
-        <?php displayMovie($array); ?>
+        <?php displayMovie($movies); ?>
     </div>
 </div>

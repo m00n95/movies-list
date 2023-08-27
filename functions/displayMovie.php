@@ -15,7 +15,7 @@ function displayMovie(array $movies): void
               <div class="card-body">
                 <h5 class="card-title"><?php echo $movie->getName(); ?></h5>
                 <p class="card-text"><?php echo $movie->getReleaseDate(); ?></p>
-                <a href="#" class="btn btn-dark">Voir plus</a>
+                <a href="movie.php?id=<?php echo $movie->getId(); ?>" class="btn btn-dark">Voir plus</a>
               </div>
             </div>
         </div>
