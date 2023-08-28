@@ -39,14 +39,19 @@ if (!isset($movie))
 }
 else
 { ?>
-    <div class="card" style="width: 18rem;">
-              <img src="assets/img/<?php echo $movie->getPicture(); ?>" class="card-img-top" alt="affiche de film">
-              <div class="card-body">
-                <h5 class="card-title"><?php echo $movie->getName(); ?></h5>
-                <p class="card-text"><?php echo $movie->getReleaseDate(); ?></p>
-              </div>
-            </div>
-        </div>
-<?php }
-?>
+
+<h1 class="text-center mt-4 text-decoration-underline"><?php echo $movie->getName(); ?></h1>
+
+<div class="contain d-flex justify-content-around">
+    <div>
+        <img class="img-size" src="assets/img/<?php echo $movie->getPicture(); ?>" alt="affiche de film">
+    </div>
+    <div class="content mt-4">
+        <p><?php echo $movie->getReleaseDate(); ?></p>
+        <p><?php echo $movie->getSummary(); ?></p>
+    </div>
+</div>
+
+
+<?php } ?>
 

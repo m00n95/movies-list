@@ -1,6 +1,7 @@
 body
 {
     background-color: rgb(42, 41, 41);
+    color:white;
 }
 
 /*   NAVBAR   */
@@ -20,9 +21,24 @@ body
     color: white !important;
 }
 
+
+/*   MOVIE   */
+
 h2
 {
     color: white;
     margin-left: 50px;
     margin-top: 30px;
+}
+
+.img-size
+{
+    width: 350px;
+    height: 500px;
+    margin-right: 60px;
+}
+
+.contain
+{
+    margin: 30px 250px 0px 250px;
 }

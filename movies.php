@@ -11,7 +11,7 @@ $movies = getMovie();
 ?>
 
 <div class="contain">
-    <div class="row">
+    <div class="d-flex flex-wrap justify-content-start">
         <?php displayMovie($movies); ?>
     </div>
 </div>

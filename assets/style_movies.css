@@ -25,7 +25,14 @@ body
 
 .contain
 {
-    margin-left: 50px;
-    margin-top: 40px ;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.img-size
+{
+    width: 254px;
+    height: 370px;
+    overflow: hidden;
 }
 
