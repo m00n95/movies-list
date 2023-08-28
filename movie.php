@@ -27,7 +27,7 @@ if ($urlId === 0)
 
 foreach ($movies as $el)
 {
-    if ($el->getId() === $urlId)
+    if ($el['id']/*->getId()*/ === $urlId)
     {
         $movie = $el;
     }
@@ -40,15 +40,15 @@ if (!isset($movie))
 else
 { ?>
 
-<h1 class="text-center mt-4 text-decoration-underline"><?php echo $movie->getName(); ?></h1>
+<h1 class="text-center mt-4 text-decoration-underline"><?php echo $movie['name']/*->getName()*/; ?></h1>
 
 <div class="contain d-flex justify-content-around">
     <div>
-        <img class="img-size" src="assets/img/<?php echo $movie->getPicture(); ?>" alt="affiche de film">
+        <img class="img-size" src="assets/img/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
     </div>
     <div class="content mt-4">
-        <p><?php echo $movie->getReleaseDate(); ?></p>
-        <p><?php echo $movie->getSummary(); ?></p>
+        <p><?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
+        <p><?php echo $movie['summary']/*->getSummary()*/; ?></p>
     </div>
 </div>
 

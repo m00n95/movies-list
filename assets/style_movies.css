@@ -36,3 +36,8 @@ body
     overflow: hidden;
 }
 
+.card
+{
+    height: 500px;
+}
+
