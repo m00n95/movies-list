@@ -1,0 +1,22 @@
+body
+{
+    background-color: rgb(42, 41, 41);
+    color: white;
+}
+
+/*   NAVBAR   */
+
+.logo img
+{
+    width: 70%;
+}
+
+.navbar
+{
+    background-color: black !important;
+}
+
+.navbar a
+{
+    color: white !important;
+}

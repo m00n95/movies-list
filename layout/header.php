@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +13,11 @@
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
   <div class="logo"> 
-     <a href="../homepage.php"><img src="/assets/img/Movie-List-black.png" alt="logo"></a>
+  <?php if (isset($_SESSION['firstname'])) { ?>
+     <a href="../homepage.php"><?php } ?><img src="/assets/img/Movie-List-black.png" alt="logo"></a>
   </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <?php if (isset ($_SESSION['password'])) { ?>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="../homepage.php">&#128306; Accueil</a>
@@ -27,8 +27,15 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../account.php">&#128100; Compte</a>
-        </li>
+        </li> 
       </ul>
+      <?php } ?>
     </div>
+    <?php if (isset($_SESSION['firstname'])) { ?>
+          <p><?php echo $_SESSION['firstname'] ?></p>
+          <a href="/login/logout.php"><button class="btn btn-dark">Déconnexion</button></a>
+      <?php } else { ?>
+          <a href="/login/login.php"><button class="btn btn-dark">Connexion</button></a>
+      <?php } ?>
   </div>
 </nav>
