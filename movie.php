@@ -6,8 +6,19 @@ require_once 'layout/footer.php';
 require_once 'classes/Movie.php';
 require_once 'functions/getMovie.php';
 require_once 'functions/displayMovie.php';
+require_once 'classes/Utils.php';
+require_once 'classes/ErrorCode.php';
 
-$movies = getMovie();
+if (!isset($_SESSION['firstname'])) {
+    Utils::redirect('index.php?error=' . ErrorCode::ACCESS_ERROR);
+  }
+
+try {
+    $movies = getMovie();
+    } catch (PDOException) {
+        echo "Erreur lors de la récupération des films";
+        exit;
+    }
 
 // Vérification d'erreur pour pouvoir interrompre le script au plus tôt
 if (!isset($_GET['id']))
@@ -47,7 +58,7 @@ else
         <img class="img-size" src="assets/img/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
     </div>
     <div class="content mt-4">
-        <p><?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
+        <p>Date de sortie : <?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
         <p><?php echo $movie['summary']/*->getSummary()*/; ?></p>
     </div>
 </div>

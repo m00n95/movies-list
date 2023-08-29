@@ -15,12 +15,8 @@ body
     background-color: black !important;
 }
 
-.navbar a
-{
-    color: white !important;
-}
-
-.navbar p
+.error
 {
     color: white;
+    font-size: larger;
 }

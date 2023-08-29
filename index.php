@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
-    <title>Movies List</title>
-</head>
-<body>
+<?php
+$pageTitle = "Movie List";
+$pageStyle = "../assets/styles.css";
+require_once 'layout/header.php';
+require_once 'layout/footer.php';
+require_once 'classes/Utils.php';
+require_once 'classes/ErrorCode.php';
 
-    <nav class="navbar">
-        <div class="logo"> 
-            <a href="index.php"><img src="/assets/img/Movie-List-black.png" alt="logo"></a>
-        </div>
-        <div class="nav-btn">
-            <button><a href="homepage.php">Se connecter</a></button>
-        </div>
-    </nav>
-    
-</body>
-</html>
+// Message d'erreur si on essaye d'accédez à une page sans être connecté
+if (isset($_GET['error'])) { ?>
+  <div class="error text-center mb-3">
+    <?php echo ErrorCode::getErrorMessage(intval($_GET['error'])); ?>
+  </div>
+<?php } ?>
