@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "name - Movie List";
+$pageTitle = "Film - Movie List";
 $pageStyle = "../assets/style_movie.css";
 require_once 'layout/header.php';
 require_once 'layout/footer.php';
@@ -8,12 +8,14 @@ require_once 'functions/getMovie.php';
 require_once 'functions/displayMovie.php';
 require_once 'classes/Utils.php';
 require_once 'classes/ErrorCode.php';
+require_once 'functions/getDbConnection.php';
 
 if (!isset($_SESSION['firstname'])) {
     Utils::redirect('index.php?error=' . ErrorCode::ACCESS_ERROR);
   }
 
 try {
+    $pdo = getDbConnection();
     $movies = getMovie();
     } catch (PDOException) {
         echo "Erreur lors de la récupération des films";

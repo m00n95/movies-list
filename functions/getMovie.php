@@ -2,9 +2,10 @@
 
 function getMovie(): array
 {
-    require_once 'getDbConnection.php';
-    $stmt = $pdo->query("SELECT * FROM movies");
-    $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    require_once __DIR__ . '/../functions/getDbConnection.php';
+    global $pdo;
+    $stmt_movie = $pdo->query("SELECT * FROM movies");
+    $movies = $stmt_movie->fetchAll(PDO::FETCH_ASSOC);
     return $movies;
 
 
