@@ -1,6 +1,5 @@
 <?php
 $pageTitle = $_GET['name'] . " - Movie List";
-$pageStyle = "../assets/style_movie.css";
 require_once 'layout/header.php';
 require_once 'layout/footer.php';
 require_once 'classes/Movie.php';
@@ -52,7 +51,7 @@ if (!isset($_GET['id'])) {
 
     <div class="contain d-flex justify-content-around">
         <div>
-            <img class="img-size" src="assets/img/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
+            <img class="size-img" src="assets/img/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
         </div>
         <div class="content mt-4">
             <p>Date de sortie : <?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>

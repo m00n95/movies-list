@@ -1,7 +1,7 @@
 body
 {
     background-color: rgb(42, 41, 41);
-    color:white;
+    color: white;
 }
 
 /*   NAVBAR   */
@@ -21,7 +21,27 @@ body
     color: white !important;
 }
 
+/*   ERROR   */
 
+.error
+{
+    color: white;
+    font-size: larger;
+}
+
+/*   MOVIES   */
+
+.img-size
+{
+    width: 254px;
+    height: 370px;
+    overflow: hidden;
+}
+
+.card
+{
+    height: 500px;
+}
 
 /*   MOVIE   */
 
@@ -32,7 +52,7 @@ h2
     margin-top: 30px;
 }
 
-.img-size
+.size-img
 {
     width: 350px;
     height: 500px;

@@ -1,6 +1,5 @@
 <?php
 $pageTitle = "Movie List";
-$pageStyle = "../assets/styles.css";
 require_once 'layout/header.php';
 require_once 'layout/footer.php';
 require_once 'classes/Utils.php';
@@ -13,3 +12,7 @@ if (isset($_GET['error'])) { ?>
   </div>
 <?php } 
 
+// Si on est déjà connecté, redirection vers la page d'accueil
+if (isset($_SESSION['password'])) {
+  Utils::redirect('homepage.php');
+}

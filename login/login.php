@@ -1,5 +1,4 @@
 <?php
-$pageStyle = '/../assets/style_login.css' ;
 $pageTitle = 'Connexion - Movie List';
 require_once __DIR__ . '/../layout/header.php';
 require_once __DIR__ . '/../classes/ErrorCode.php';
