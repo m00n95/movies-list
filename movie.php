@@ -9,62 +9,69 @@ require_once 'functions/displayMovie.php';
 require_once 'classes/Utils.php';
 require_once 'classes/ErrorCode.php';
 require_once 'functions/getDbConnection.php';
+require_once 'functions/getComment.php';
 
 if (!isset($_SESSION['firstname'])) {
     Utils::redirect('index.php?error=' . ErrorCode::ACCESS_ERROR);
-  }
+}
 
 try {
     $pdo = getDbConnection();
     $movies = getMovie();
-    } catch (PDOException) {
-        echo "Erreur lors de la récupération des films";
+    $comments = getComment();
+} catch (PDOException) {
+    echo "Erreur lors de la récupération des films";
+    exit;
+}
+
+// Vérification d'erreur pour pouvoir interrompre le script au plus tôt
+if (!isset($_GET['id'])) {
+    http_response_code(400); // Bad Request
+?> <h2>L'id est requis dans l'url</h2> <?php
         exit;
     }
 
-// Vérification d'erreur pour pouvoir interrompre le script au plus tôt
-if (!isset($_GET['id']))
-{
-    http_response_code(400); // Bad Request
-    ?> <h2>L'id est requis dans l'url</h2> <?php
-    exit;
-}
-
-$urlId = intval($_GET['id']); 
-if ($urlId === 0)
-{
-    http_response_code(400); 
-    ?> <h2>L'id est incorrect</h2> <?php
-    exit;
-}
-
-foreach ($movies as $el)
-{
-    if ($el['id']/*->getId()*/ === $urlId)
-    {
-        $movie = $el;
+    $urlId = intval($_GET['id']);
+    if ($urlId === 0) {
+        http_response_code(400);
+        ?> <h2>L'id est incorrect</h2> <?php
+        exit;
     }
-}
 
-if (!isset($movie))
-{
-    ?> <h2>Aucun film correspondant</h2> <?php 
-}
-else
-{ ?>
+    foreach ($movies as $el) {
+        if ($el['id']/*->getId()*/ === $urlId) {
+            $movie = $el;
+        }
+    }
 
-<h1 class="text-center mt-4 text-decoration-underline"><?php echo $movie['name']/*->getName()*/; ?></h1>
+        if (!isset($movie)) {
+    ?> <h2>Aucun film correspondant</h2> <?php
+        } else { ?>
 
-<div class="contain d-flex justify-content-around">
-    <div>
-        <img class="img-size" src="assets/img/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
+    <h1 class="text-center mt-4 text-decoration-underline"><?php echo $movie['name']/*->getName()*/; ?></h1>
+
+    <div class="contain d-flex justify-content-around">
+        <div>
+            <img class="img-size" src="assets/img/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
+        </div>
+        <div class="content mt-4">
+            <p>Date de sortie : <?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
+            <hr>
+            <p><?php echo $movie['summary']/*->getSummary()*/; ?></p>
+            <?php $commentFound = false; // to check if a comment was found for this movie
+            foreach ($comments as $comment) {
+                if (($comment['movies_id'] == $urlId)) {
+                    $commentFound = true; ?>
+                    <hr>
+                    <h5>Note :</h5>
+                    <p><?php echo $comment['rating'] ?>/10</p>
+                    <hr>
+                    <h5>Commentaire :</h5>
+                    <p><?php echo $comment['content'] ?></p>
+                    <p>Commentaire daté du <?php echo $comment['created_time'] ?></p>
+                <?php } } if (!$commentFound) { ?>
+                    <button type="button" class="btn btn-dark">Ajouter un commentaire</button>
+            <?php } ?>
+        </div>
     </div>
-    <div class="content mt-4">
-        <p>Date de sortie : <?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
-        <p><?php echo $movie['summary']/*->getSummary()*/; ?></p>
-    </div>
-</div>
-
-
 <?php } ?>
-
