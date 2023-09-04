@@ -1,14 +1,14 @@
 <?php
-$pageTitle = "Films - Movie List";
+$pageTitle = "Films - Test -Movie List";
 $pageStyle = "../assets/style_movies.css";
-require_once 'layout/header.php';
-require_once 'layout/footer.php';
-require_once 'classes/Movie.php';
-require_once 'functions/getMovie.php';
-require_once 'functions/displayMovie.php';
-require_once 'classes/Utils.php';
-require_once 'classes/ErrorCode.php';
-require_once 'layout/sidebar.php';
+require_once '../layout/header.php';
+require_once '../layout/footer.php';
+require_once '../classes/Movie.php';
+require_once '../functions/getMovie.php';
+require_once '../functions/displayMovie.php';
+require_once '../classes/Utils.php';
+require_once '../classes/ErrorCode.php';
+require_once '../layout/sidebar.php';
 
 if (!isset($_SESSION['firstname'])) {
     Utils::redirect('index.php?error=' . ErrorCode::ACCESS_ERROR);

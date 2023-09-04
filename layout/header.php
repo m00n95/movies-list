@@ -13,7 +13,7 @@
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
   <div class="logo"> 
-  <?php if (isset($_SESSION['firstname'])) { ?>
+  <?php if (isset($_SESSION['password'])) { ?>
      <a href="../homepage.php"><?php } ?><img src="/assets/img/Movie-List-black.png" alt="logo"></a>
   </div>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -31,8 +31,7 @@
       </ul>
       <?php } ?>
     </div>
-    <?php if (isset($_SESSION['firstname'])) { ?>
-          <p><?php echo $_SESSION['firstname'] ?></p>
+    <?php if (isset($_SESSION['password'])) { ?>
           <a href="/login/logout.php"><button class="btn btn-dark">Déconnexion</button></a>
       <?php } else { ?>
           <a href="/login/login.php"><button class="btn btn-dark">Connexion</button></a>

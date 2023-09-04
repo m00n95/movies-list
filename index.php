@@ -11,4 +11,5 @@ if (isset($_GET['error'])) { ?>
   <div class="error text-center mb-3">
     <?php echo ErrorCode::getErrorMessage(intval($_GET['error'])); ?>
   </div>
-<?php } ?>
+<?php } 
+
