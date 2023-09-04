@@ -20,13 +20,13 @@
     <?php if (isset ($_SESSION['password'])) { ?>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../homepage.php">&#128306; Accueil</a>
+          <a class="nav-link" href="../homepage.php">&#10148; Accueil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../movies.php">&#128253; Films</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../account.php">&#128100; Compte</a>
+          <a class="nav-link" href="../add_movie.php">&#10010; Ajouter un film</a>
         </li> 
       </ul>
       <?php } ?>

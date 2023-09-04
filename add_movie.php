@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Compte - Movie List";
+$pageTitle = "Ajouter un film - Movie List";
 require_once 'layout/header.php';
 require_once 'layout/footer.php';
 require_once 'classes/Utils.php';
