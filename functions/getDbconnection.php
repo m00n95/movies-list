@@ -2,11 +2,24 @@
 
 function getDbConnection(): PDO
 {
-    //DSN = Data Source Name 
-    $pdo = new PDO(
-        "mysql:host=host.docker.internal;port=3306;dbname=movies_list;charset=utf8mb4",
-        "root",
-        "");
+  $dbSettings = parse_ini_file(__DIR__ . '/../db.ini');
+  [
+    'DB_HOST' => $host,
+    'DB_PORT' => $port,
+    'DB_NAME' => $dbname,
+    'DB_CHARSET' => $charset,
+    'DB_USER' => $user,
+    'DB_PASSWORD' => $password
+  ] = $dbSettings;
+
+  // DSN = Data Source Name
+  $pdo = new PDO(
+    "mysql:host=$host;
+    port=$port;
+    dbname=$dbname;
+    charset=$charset",
+    $user,
+    $password);
     return $pdo;
     
 }
