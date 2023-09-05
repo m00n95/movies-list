@@ -68,4 +68,5 @@ $stmt->execute([
 ]);
 }
 
-Utils::redirect('/../movies.php');
+// Redirect directly to the new movie
+Utils::redirect('/../movie.php?id=' . $movieId['id'] . "&name=" . $_POST['title']);

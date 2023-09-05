@@ -30,6 +30,8 @@ if (!isset($_GET['id'])) {
         exit;
     }
 
+    $urlName = $_GET['name'];
+
     $urlId = intval($_GET['id']);
     if ($urlId === 0) {
         http_response_code(400);
@@ -69,7 +71,7 @@ if (!isset($_GET['id'])) {
                     <p><?php echo $comment['content'] ?></p>
                     <p>Commentaire daté du <?php echo $comment['created_time'] ?></p>
                 <?php } } if (!$commentFound) { ?>
-                    <a href="/../CRUD/create_comment.php" class="btn btn-dark">Ajouter un commentaire</a>
+                    <a href="/../CRUD/create_comment.php?id=<?php echo $urlId; ?>&name=<?php echo $urlName; ?>" class="btn btn-dark">Ajouter un commentaire</a>
             <?php } ?>
         </div>
     </div>
