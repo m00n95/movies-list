@@ -26,7 +26,7 @@
           <a class="nav-link" href="../movies.php">&#128253; Films</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../create_movie.php">&#10010; Ajouter un film</a>
+          <a class="nav-link" href="/../CRUD/create_movie.php">&#10010; Ajouter un film</a>
         </li> 
       </ul>
       <?php } ?>

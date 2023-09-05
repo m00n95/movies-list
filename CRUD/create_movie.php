@@ -1,11 +1,11 @@
 <?php
 $pageTitle = "Ajouter un film - Movie List";
-require_once 'layout/header.php';
-require_once 'layout/footer.php';
-require_once 'classes/Utils.php';
-require_once 'classes/ErrorCode.php';
-require_once 'functions/getGenre.php';
-require_once 'functions/getDbConnection.php';
+require_once __DIR__ . '/../layout/header.php';
+require_once __DIR__ . '/../layout/footer.php';
+require_once __DIR__ . '/../classes/Utils.php';
+require_once __DIR__ . '/../classes/ErrorCode.php';
+require_once __DIR__ . '/../functions/getGenre.php';
+require_once __DIR__ . '/../functions/getDbConnection.php';
 
 if (!isset($_SESSION['firstname'])) {
   Utils::redirect('index.php?error=' . ErrorCode::ACCESS_ERROR);
@@ -25,7 +25,7 @@ $uniqueGenres2 = array();
 
 <h1 class="text-center mt-4">Ajouter un nouveau film</h1>
 
-<form style="margin: 20px 500px 0px 500px;" action="" method="POST" >
+<form style="margin: 20px 500px 0px 500px;" action="add_movie.php" method="POST" >
   <div class="mb-3">
     <label for="title" class="form-label">Titre du film</label>
     <input type="text" name="title" class="form-control" id="title">
