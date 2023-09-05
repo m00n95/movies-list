@@ -69,7 +69,7 @@ if (!isset($_GET['id'])) {
                     <p><?php echo $comment['content'] ?></p>
                     <p>Commentaire daté du <?php echo $comment['created_time'] ?></p>
                 <?php } } if (!$commentFound) { ?>
-                    <a href="/add_comment.php" class="btn btn-dark">Ajouter un commentaire</a>
+                    <a href="/create_comment.php" class="btn btn-dark">Ajouter un commentaire</a>
             <?php } ?>
         </div>
     </div>
