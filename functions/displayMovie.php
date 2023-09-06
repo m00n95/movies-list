@@ -8,7 +8,9 @@
  */
 function displayMovie(array $movies): void
 {
-    foreach($movies as $movie) { ?>
+    foreach($movies as $movie) { 
+      $urlId = $movie['id'];
+      $urlName = $movie['name'];?>
         <div>
             <div class="card m-3" style="width: 16rem; ">
             <div class="img-size">
@@ -20,8 +22,8 @@ function displayMovie(array $movies): void
                 <div class="d-flex justify-content-between">
                   <a href="movie.php?id=<?php echo $movie['id']/*->getId()*/; ?>&name=<?php echo $movie['name']?>" class="btn btn-dark">Voir  plus</a>
                     <div class="d-flex align-items-center">
-                      <a class="text-decoration-none" href="/update_movie.php">&#9998</a>
-                      <a class="text-decoration-none" href="/delete_movie.php">&#128465</a>
+                      <a class="text-decoration-none" href="/CRUD/update_movie.php?id=<?php echo $urlId; ?>&name=<?php echo $urlName; ?>">&#9998</a>
+                      <a class="text-decoration-none" href="/CRUD/delete_movie.php?id=<?php echo $urlId; ?>&name=<?php echo $urlName; ?>">&#128465</a>
                     </div>
                 </div>
               </div>

@@ -14,7 +14,7 @@
   <div class="container-fluid">
   <div class="logo"> 
   <?php if (isset($_SESSION['password'])) { ?>
-     <a href="../homepage.php"><?php } ?><img src="/assets/img/Movie-List-black.png" alt="logo"></a>
+     <a href="../homepage.php"><?php } ?><img src="/images/Movie-List-black.png" alt="logo"></a>
   </div>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <?php if (isset ($_SESSION['password'])) { ?>

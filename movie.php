@@ -64,10 +64,16 @@ if (!isset($_GET['id'])) {
                 if (($comment['movies_id'] == $urlId)) {
                     $commentFound = true; ?>
                     <hr>
-                    <h5>Note :</h5>
+                    <h5>Note :</h5>                      
                     <p><?php echo $comment['rating'] ?>/10</p>
                     <hr>
-                    <h5>Commentaire :</h5>
+                    <div class="d-flex justify-content-between">
+                        <h5>Commentaire :</h5>
+                        <div class="d-flex align-items-center">
+                          <a class="text-decoration-none" href="/CRUD/update_comment.php?id=<?php echo $urlId; ?>&name=<?php echo $urlName; ?>">&#9998</a>
+                          <a class="text-decoration-none" href="/CRUD/delete_comment.php?id=<?php echo $urlId; ?>">&#128465</a>
+                        </div>
+                    </div>
                     <p><?php echo $comment['content'] ?></p>
                     <p>Commentaire daté du <?php echo $comment['created_time'] ?></p>
                 <?php } } if (!$commentFound) { ?>

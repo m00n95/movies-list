@@ -18,14 +18,14 @@ $stmtMovie->execute([
     'name' => $_POST['title'],
     'release_date' => $_POST['release_date'],
     'picture' => $filename,
-    'summary' => $_POST['summary']
+    'summary' => $_POST['summary'],
 ]);
 
 
 $stmtGenre = $pdo->prepare("SELECT id FROM genres WHERE genre_name LIKE :movie_genre1");
 
 $stmtGenre->execute([
-    'movie_genre1' => $_POST['movie_genre1']
+    'movie_genre1' => $_POST['movie_genre1'],
     ]);
 $genreId1 = $stmtGenre->fetch(PDO::FETCH_ASSOC);
 
@@ -45,7 +45,7 @@ $stmt = $pdo->prepare(
 
 $stmt->execute([
     'movies_id' => $movieId['id'],
-    'genres_id1' => $genreId1['id']
+    'genres_id1' => $genreId1['id'],
 ]);
 
 // Check if $_POST['movie_genre2'] is not empty so that it can add another genre
