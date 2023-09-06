@@ -53,7 +53,7 @@ if (!isset($_GET['id'])) {
 
     <div class="contain d-flex justify-content-around">
         <div>
-            <img class="size-img" src="assets/img/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
+            <img class="size-img" src="images/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
         </div>
         <div class="content mt-4">
             <p>Date de sortie : <?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
