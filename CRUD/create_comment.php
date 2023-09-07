@@ -8,7 +8,7 @@ require_once __DIR__ . '/../functions/getComment.php';
 require_once __DIR__ . '/../functions/getDbConnection.php';
 
 if (!isset($_SESSION['firstname'])) {
-    Utils::redirect('index.php?error=' . ErrorCode::ACCESS_ERROR);
+    Utils::redirect('/index.php?error=' . ErrorCode::ACCESS_ERROR);
 }
 
 try {

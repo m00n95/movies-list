@@ -18,7 +18,7 @@ function displayMovie(array $movies): void
             </div>
               <div class="card-body">
                 <h5 class="card-title"><?php echo $movie['name']/*->getName()*/; ?></h5>
-                <p class="card-text"><?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
+                <p class="card-text">Sortie : <?php echo $movie['release_date']/*->getReleaseDate()*/; ?></p>
                 <div class="d-flex justify-content-between">
                   <a href="movie.php?id=<?php echo $movie['id']/*->getId()*/; ?>&name=<?php echo $movie['name']?>" class="btn btn-dark">Voir  plus</a>
                     <div class="d-flex align-items-center">
