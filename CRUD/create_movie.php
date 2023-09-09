@@ -63,5 +63,5 @@ $uniqueGenres2 = array();
     <?php } } ?>
   </select>
   </div>
-  <button type="submit" class="btn btn-dark mt-2">Créer</button>
+  <button type="submit" class="btn btn-dark">Créer</button>
 </form>

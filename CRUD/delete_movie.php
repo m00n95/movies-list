@@ -31,7 +31,7 @@ $filename = $stmt->fetch(PDO::FETCH_ASSOC);
 var_dump($filename);
 
 // Delete the picture in '/images'
-$imageFilePath = __DIR__ . '/../images/' . $filename['picture']; // Remplacez par le chemin réel de votre image
+$imageFilePath = __DIR__ . '/../images/' . $filename['picture']; 
 if (file_exists($imageFilePath)) {
     if (unlink($imageFilePath)) {
     } else {
