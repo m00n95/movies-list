@@ -1,7 +1,6 @@
 <?php
 $pageTitle = $_GET['name'] . " - Movie List";
 require_once 'layout/header.php';
-require_once 'layout/footer.php';
 require_once 'classes/Movie.php';
 require_once 'functions/getMovie.php';
 require_once 'functions/displayMovie.php';
@@ -51,7 +50,7 @@ if (!isset($_GET['id'])) {
 
     <h1 class="text-center mt-4 text-decoration-underline"><?php echo $movie['name']/*->getName()*/; ?></h1>
 
-    <div class="contain d-flex justify-content-around">
+    <div class="contain d-flex justify-content-around mb-5">
         <div>
             <img class="size-img" src="images/<?php echo $movie['picture']/*->getPicture()*/; ?>" alt="affiche de film">
         </div>
@@ -81,4 +80,5 @@ if (!isset($_GET['id'])) {
             <?php } ?>
         </div>
     </div>
-<?php } ?>
+<?php } 
+ require_once 'layout/footer.php';

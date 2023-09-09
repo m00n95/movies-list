@@ -8,3 +8,6 @@ require_once 'classes/ErrorCode.php';
 if (!isset($_SESSION['firstname'])) {
     Utils::redirect('index.php?error=' . ErrorCode::ACCESS_ERROR);
   }
+?>
+
+<?php require_once 'layout/footer.php';

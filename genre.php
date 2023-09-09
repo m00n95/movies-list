@@ -48,3 +48,5 @@ $filteredMovies = array_filter($movies, function ($movie) use ($urlId) {
         <?php displayMovie($filteredMovies); ?>
     </div>
 </div>
+
+<?php require_once 'layout/footer.php';

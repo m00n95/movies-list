@@ -1,7 +1,6 @@
 <?php
 $pageTitle = "Films - Movie List";
 require_once 'layout/header.php';
-require_once 'layout/footer.php';
 require_once 'classes/Movie.php';
 require_once 'functions/getMovie.php';
 require_once 'functions/displayMovie.php';
@@ -27,3 +26,5 @@ $movie = getMovie();
         <?php displayMovie($movie); ?>
     </div>
 </div>
+
+<?php require_once 'layout/footer.php';

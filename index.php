@@ -1,7 +1,6 @@
 <?php
 $pageTitle = "Movie List";
 require_once 'layout/header.php';
-require_once 'layout/footer.php';
 require_once 'classes/Utils.php';
 require_once 'classes/ErrorCode.php';
 
@@ -16,3 +15,6 @@ if (isset($_GET['error'])) { ?>
 if (isset($_SESSION['password'])) {
   Utils::redirect('homepage.php');
 }
+?>
+
+<?php require_once 'layout/footer.php';

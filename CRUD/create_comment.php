@@ -1,7 +1,6 @@
 <?php
 $pageTitle = "Ajouter un commentaire - Movie List";
 require_once __DIR__ . '/../layout/header.php';
-require_once __DIR__ . '/../layout/footer.php';
 require_once __DIR__ . '/../classes/Utils.php';
 require_once __DIR__ . '/../classes/ErrorCode.php';
 require_once __DIR__ . '/../functions/getComment.php';
@@ -25,7 +24,7 @@ $urlName = $_GET['name'];
 
 <h1 class="text-center mt-4">Ajouter un nouveau commentaire pour <?php echo $urlName; ?></h1>
 
-<form style="margin: 20px 500px 0px 500px;" action="add_comment.php?id=<?php echo $urlMovieId; ?>&name=<?php echo $urlName; ?>" method="POST" enctype="multipart/form-data">
+<form style="margin: 20px 500px 140px 500px;" action="add_comment.php?id=<?php echo $urlMovieId; ?>&name=<?php echo $urlName; ?>" method="POST" enctype="multipart/form-data">
   <div class="mb-3">
     <label for="content" class="form-label">Contenu de votre commentaire</label>
     <textarea name="content" class="form-control" id="content" required></textarea>
@@ -40,3 +39,5 @@ $urlName = $_GET['name'];
   </div>
   <button type="submit" class="btn btn-dark mt-2">Créer</button>
 </form>
+
+<?php require_once __DIR__ . '/../layout/footer.php';

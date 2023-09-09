@@ -1,7 +1,6 @@
 <?php
 $pageTitle = "Modifier un film - Movie List";
 require_once __DIR__ . '/../layout/header.php';
-require_once __DIR__ . '/../layout/footer.php';
 require_once __DIR__ . '/../classes/Utils.php';
 require_once __DIR__ . '/../classes/ErrorCode.php';
 require_once __DIR__ . '/../functions/getGenre.php';
@@ -46,7 +45,7 @@ $genre2 = $movie[1]['movie_genre'];
 
 <h1 class="text-center mt-4">Modifier le film <?php echo $urlName; ?></h1>
 
-<form style="margin: 20px 500px 0px 500px;" action="edit_movie.php?id=<?php echo $urlMovieId; ?>&name=<?php echo $urlName; ?>&genre1=<?php echo $genre1; ?>&genre2=<?php echo $genre2; ?>" method="POST" enctype="multipart/form-data">
+<form style="margin: 20px 500px 50px 500px;" action="edit_movie.php?id=<?php echo $urlMovieId; ?>&name=<?php echo $urlName; ?>&genre1=<?php echo $genre1; ?>&genre2=<?php echo $genre2; ?>" method="POST" enctype="multipart/form-data">
   <div class="mb-3">
     <label for="title" class="form-label">Titre du film</label>
     <input type="text" name="new_title" class="form-control" id="title" value="<?php echo $movie[0]['name'] ?>" required>
@@ -94,3 +93,5 @@ $genre2 = $movie[1]['movie_genre'];
   <button type="submit" class="btn btn-dark">Modifier</button>
 </form>
 <!-- Peut-être faire une erreur si les deux genres sont les mêmes -->
+
+<?php require_once __DIR__ . '/../layout/footer.php';

@@ -1,7 +1,6 @@
 <?php
 $pageTitle = "Ajouter un film - Movie List";
 require_once __DIR__ . '/../layout/header.php';
-require_once __DIR__ . '/../layout/footer.php';
 require_once __DIR__ . '/../classes/Utils.php';
 require_once __DIR__ . '/../classes/ErrorCode.php';
 require_once __DIR__ . '/../functions/getGenre.php';
@@ -25,7 +24,7 @@ $uniqueGenres2 = array();
 
 <h1 class="text-center mt-4">Ajouter un nouveau film</h1>
 
-<form style="margin: 20px 500px 0px 500px;" action="add_movie.php" method="POST" enctype="multipart/form-data">
+<form style="margin: 20px 500px 50px 500px;" action="add_movie.php" method="POST" enctype="multipart/form-data">
   <div class="mb-3">
     <label for="title" class="form-label">Titre du film</label>
     <input type="text" name="title" class="form-control" id="title" required>
@@ -65,3 +64,5 @@ $uniqueGenres2 = array();
   </div>
   <button type="submit" class="btn btn-dark">Créer</button>
 </form>
+
+<?php require_once __DIR__ . '/../layout/footer.php';
