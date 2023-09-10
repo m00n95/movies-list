@@ -90,7 +90,7 @@ $genre2 = $movie[1]['movie_genre'];
     <?php } } ?>
   </select>
   </div>
-  <button type="submit" class="btn btn-dark">Modifier</button>
+  <button type="submit" class="btn btn-secondary">Modifier</button>
 </form>
 <!-- Peut-être faire une erreur si les deux genres sont les mêmes -->
 

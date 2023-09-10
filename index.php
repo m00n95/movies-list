@@ -17,4 +17,11 @@ if (isset($_SESSION['password'])) {
 }
 ?>
 
+<div style="background-image: url('/images/film.jpg'); height:675px;">
+  <h1 class="text-center pt-4">Bienvenue sur Movie List !</h1>
+  <p class="pt-4" style="font-size: 20px; margin-left: 40px;">Le site qui vous aide à gardez une trace des films que vous aimez !</p>
+  <p style="font-size: 20px; margin-left: 40px;">Connectez-vous dès maintenant pour accéder à vos films.</p>
+  <a href="/login/login.php"><button class="btn btn-secondary" style="font-size: 18px; margin-left: 40px;">Connexion</button></a>
+</div>
+
 <?php require_once 'layout/footer.php';

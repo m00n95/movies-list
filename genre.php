@@ -1,7 +1,6 @@
 <?php
 $pageTitle = $_GET['genre_name'] . " - Movie List";
 require_once 'layout/header.php';
-require_once 'layout/footer.php';
 require_once 'classes/Movie.php';
 require_once 'functions/getGenre.php';
 require_once 'functions/displayMovie.php';
@@ -43,7 +42,7 @@ $filteredMovies = array_filter($movies, function ($movie) use ($urlId) {
     return $movie['genre_name'] === $urlId;
 }); ?>
 
-<div style="margin: 30px 0px 0px 320px;">
+<div style="margin: 30px 0px 30px 320px;">
     <div class="d-flex flex-wrap justify-content-start">
         <?php displayMovie($filteredMovies); ?>
     </div>

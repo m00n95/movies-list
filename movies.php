@@ -21,7 +21,7 @@ $movie = getMovie();
 }
 ?>
 
-<div style="margin: 30px 0px 0px 320px;">
+<div style="margin: 30px 0px 30px 320px;">
     <div class="d-flex flex-wrap justify-content-start">
         <?php displayMovie($movie); ?>
     </div>

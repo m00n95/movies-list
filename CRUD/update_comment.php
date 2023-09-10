@@ -43,7 +43,7 @@ $comment = $stmt->fetch(PDO::FETCH_ASSOC);
     <label for="created_time" class="form-label">Date de modification du commentaire</label>
     <input type="date" name="new_created_time" class="form-control" id="created_time" value="<?php echo $comment['created_time'] ?>" required>
   </div>
-  <button type="submit" class="btn btn-dark mt-2">Modifier</button>
+  <button type="submit" class="btn btn-secondary mt-2">Modifier</button>
 </form>
 
 <?php require_once __DIR__ . '/../layout/footer.php';

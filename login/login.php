@@ -13,7 +13,7 @@ require_once __DIR__ . '/../classes/ErrorCode.php';
 <?php } ?>
 
 <div class="d-flex justify-content-center ">
-<form action="auth.php" method="post">
+<form action="auth.php" method="post" style="margin-bottom: 255px;">
   <div class="mb-3 col-12">
     <label for="email" class="form-label">Email :</label>
     <input type="text" class="form-control" name="email" id="email" />
@@ -26,7 +26,7 @@ require_once __DIR__ . '/../classes/ErrorCode.php';
     <input type="checkbox" class="form-check-input" id="checkbox">
     <label class="form-check-label" for="checkbox">Je suis un robot</label>
   </div>
-  <button type="submit" class="btn btn-dark">Se connecter</button>
+  <button type="submit" class="btn btn-secondary">Se connecter</button>
 </form>
 </div>
 

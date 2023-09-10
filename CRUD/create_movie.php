@@ -62,7 +62,7 @@ $uniqueGenres2 = array();
     <?php } } ?>
   </select>
   </div>
-  <button type="submit" class="btn btn-dark">Créer</button>
+  <button type="submit" class="btn btn-secondary">Créer</button>
 </form>
 
 <?php require_once __DIR__ . '/../layout/footer.php';

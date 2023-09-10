@@ -37,7 +37,7 @@ $urlName = $_GET['name'];
     <label for="created_time" class="form-label">Date de création du commentaire</label>
     <input type="date" name="created_time" class="form-control" id="created_time" required>
   </div>
-  <button type="submit" class="btn btn-dark mt-2">Créer</button>
+  <button type="submit" class="btn btn-secondary mt-2">Créer</button>
 </form>
 
 <?php require_once __DIR__ . '/../layout/footer.php';
