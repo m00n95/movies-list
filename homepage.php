@@ -27,7 +27,7 @@ $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <div style="margin-left: 50px; margin-right: 50px;">
   <p>Bienvenue sur Movie List, le site pour gardez une trace des films que vous avez vu. <br>
-   Sur ce cite vous pourrez ajouter vos propres films et les modifier si besoin. De plus, pour chacun de vos films vous aurez l'occasion d'ajouter un commentaire accompagné d'une note de votre choix.</p>
+   Sur ce site vous pourrez ajouter vos propres films et les modifier si besoin. De plus, pour chacun de vos films vous aurez l'occasion d'ajouter un commentaire accompagné d'une note de votre choix.</p>
   <p>Commencez dès maintenant votre liste de films !</p>
   <a href="/CRUD/create_movie.php"><button class="btn btn-secondary">Ajouter un film !</button></a>
 </div>
